@@ -1,0 +1,185 @@
+.rent-occasion {
+  padding: 90px 7%;
+  background-color: var(--bg-surface);
+}
+
+
+/* SECTION HEADING*/
+
+.occasion-heading {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.occasion-heading p {
+  margin: 0 0 10px;
+  color: var(--action-primary);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.occasion-heading h2 {
+  margin: 0 0 14px;
+  color: var(--text-heading);
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.occasion-heading span {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+
+/*  OCCASION CONTAINER*/
+
+.occasion-container {
+  max-width: 1150px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+
+/*  FLIP CARD MECHANICS
+    outer = perspective wrapper, inner = the piece that rotates,
+    front/back = the two faces, each hidden when facing away. */
+
+.occasion-flip-outer {
+  height: 200px;
+  perspective: 1200px;
+  cursor: pointer;
+}
+
+.occasion-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+/* Desktop: flip on hover */
+@media (hover: hover) {
+  .occasion-flip-outer:hover .occasion-flip-inner {
+    transform: rotateY(180deg);
+  }
+}
+
+/* Touch devices: flip on tap (class toggled via React state) */
+.occasion-flip-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.occasion-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 16px;
+  padding: 26px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/*  FRONT FACE — icon + title only, centered */
+
+.occasion-front {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 14px;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+}
+
+.occasion-front h3 {
+  margin: 0;
+  color: var(--text-heading);
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.occasion-icon {
+  width: 66px;
+  height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--tint);
+  border-radius: 16px;
+  color: var(--accent);
+}
+
+
+/*  BACK FACE — description + button, pre-rotated so it reads
+    correctly once the card flips around */
+
+.occasion-back {
+  transform: rotateY(180deg);
+  justify-content: center;
+  background-color: var(--tint);
+  border: 1px solid var(--accent);
+}
+
+.occasion-back h3 {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.occasion-back p {
+  margin: 0;
+  color: var(--text-heading);
+  opacity: 0.75;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.occasion-back button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 16px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.occasion-back button span {
+  font-size: 17px;
+}
+
+
+/*  RESPONSIVE */
+
+@media (max-width: 950px) {
+  .occasion-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .occasion-heading h2 {
+    font-size: 29px;
+  }
+
+  .occasion-container {
+    grid-template-columns: 1fr;
+  }
+
+  .occasion-flip-outer {
+    height: 190px;
+  }
+}

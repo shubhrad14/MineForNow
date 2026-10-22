@@ -1,0 +1,80 @@
+.why-choose-us {
+  padding: 70px 7%;
+  background-color: var(--bg-surface);
+}
+
+.why-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.why-heading {
+  margin: 0 0 32px;
+  color: var(--text-heading);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.why-brand {
+  color: var(--action-primary);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.why-card {
+  padding: 26px;
+  background-color: var(--bg-soft);
+  border-radius: 14px;
+  box-sizing: border-box;
+}
+
+.why-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-heading);
+}
+
+.why-card h3 {
+  margin: 0 0 8px;
+  color: var(--text-heading);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.why-card p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-heading {
+    font-size: 21px;
+  }
+}

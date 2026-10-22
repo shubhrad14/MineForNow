@@ -1,0 +1,28 @@
+:root {
+  /* Backgrounds */
+  --bg-page: #fbf9f4;        /* overall page background */
+  --bg-surface: #ffffff;     /* navbar, cards, search input background */
+  --bg-soft: #f2ecdd;        /* light oat tint — hero background, decorative circles */
+
+  /* Text */
+  --text-heading: #4a4f3a;   /* logo, main headings */
+  --text-body: #37392f;      /* body text */
+  --text-price: #8f4d3a;     /* item prices */
+  --text-muted: #8a8776;     /* location text, secondary/less important text */
+
+  /* Actions */
+  --action-primary: #b15d45;       /* primary buttons, wishlist active */
+  --action-primary-hover: #4a4f3a; /* primary button hover */
+
+  /* Badges */
+  --badge-featured: #c9a45c;   /* Featured/New badge */
+  --badge-bg: #e3dcc7;         /* category badge background */
+  --badge-text: #4a4f3a;       /* category badge text */
+
+  /* Structure */
+  --border-light: #e8e2d3;     /* card borders */
+
+  --footer-bg: #363b2a;        /* dark olive — footer background */
+  --footer-text: #f7f5ef;      /* light warm text on dark footer */
+  --footer-text-muted: #cfd1c3; /* muted light text — footer description, links, bottom bar */
+}

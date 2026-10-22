@@ -1,0 +1,132 @@
+.how-it-works-v2 {
+  padding: 60px 7%;
+  background-color: var(--bg-surface);
+}
+
+.how-v2-container {
+  max-width: 1300px;
+  margin: 0 auto;
+
+  background-color: var(--bg-soft);
+  border-radius: 28px;
+  padding: 45px 50px 50px;
+  box-sizing: border-box;
+}
+
+/* HEADING */
+
+.how-v2-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.how-v2-heading p {
+  margin: 0 0 8px;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.how-v2-heading h2 {
+  margin: 0;
+  color: var(--text-heading);
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* STEPS ROW */
+
+.how-v2-steps {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.how-v2-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.how-v2-step {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: left;
+}
+
+/* ILLUSTRATION PLACEHOLDER
+   Swap the icon box below for a real flat-style illustration
+   (e.g. from unDraw.co or Storyset.com) for the polished look. */
+
+.how-v2-illustration {
+  width: 140px;
+  height: 140px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--bg-surface);
+  border-radius: 16px;
+  color: var(--action-primary);
+
+  box-shadow: 0 8px 20px rgba(74, 79, 58, 0.08);
+}
+
+.how-v2-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.how-v2-step h3 {
+  margin: 0 0 8px;
+  color: var(--text-heading);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.how-v2-step p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.7;
+  max-width: 260px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 500px) {
+  .how-v2-step {
+    flex-direction: column;   /* stack image above text only on small phones */
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .how-v2-container {
+    padding: 35px 24px 40px;
+  }
+
+  .how-v2-heading h2 {
+    font-size: 22px;
+  }
+
+  .how-v2-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .how-v2-step {
+    align-items: center;
+    text-align: center;
+  }
+
+}

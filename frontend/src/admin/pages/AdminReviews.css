@@ -1,0 +1,330 @@
+/* =========================================================
+   ADMIN REVIEWS & TRUST AUDIT PAGE
+========================================================= */
+
+.admin-reviews-page {
+  --admin-sidebar-width: 270px;
+  min-height: 100vh;
+  width: 100%;
+  background: var(--bg-page, #fbf9f4);
+  color: var(--text-body, #626053);
+  transition: padding-left 0.3s ease;
+  box-sizing: border-box;
+}
+
+.admin-reviews-page.sidebar-is-open {
+  padding-left: var(--admin-sidebar-width);
+}
+
+.admin-reviews-content {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 32px 40px 60px;
+}
+
+.admin-reviews-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.admin-reviews-eyebrow {
+  margin: 0 0 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #2e6930;
+  text-transform: uppercase;
+}
+
+.admin-reviews-header h1 {
+  margin: 0 0 6px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 34px;
+  font-weight: 500;
+  color: var(--text-heading, #4a4f3a);
+}
+
+.admin-reviews-header span {
+  font-size: 13.5px;
+  color: var(--text-muted, #8a8776);
+}
+
+.admin-reviews-quick-stat {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  background: var(--bg-surface, #ffffff);
+  border: 1px solid var(--border-light, #e8e2d3);
+  border-radius: 12px;
+}
+
+.admin-reviews-quick-stat strong {
+  display: block;
+  font-size: 19px;
+  color: #2e6930;
+}
+
+.admin-reviews-quick-stat span {
+  font-size: 11px;
+  color: var(--text-muted, #8a8776);
+}
+
+/* METRICS */
+.admin-reviews-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.review-metric-box {
+  padding: 18px 20px;
+  background: var(--bg-surface, #ffffff);
+  border: 1px solid var(--border-light, #e8e2d3);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.review-metric-box span {
+  font-size: 12px;
+  color: var(--text-muted, #8a8776);
+  font-weight: 600;
+}
+
+.review-metric-box strong {
+  font-size: 22px;
+  color: var(--text-heading, #4a4f3a);
+}
+
+.review-metric-box small {
+  font-size: 11px;
+  color: var(--text-muted, #8a8776);
+}
+
+/* TOOLBAR */
+.admin-reviews-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.admin-reviews-search {
+  flex: 1;
+  min-width: 260px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.admin-reviews-search svg {
+  position: absolute;
+  left: 14px;
+  color: var(--text-muted, #8a8776);
+}
+
+.admin-reviews-search input {
+  width: 100%;
+  padding: 11px 14px 11px 40px;
+  border-radius: 10px;
+  border: 1px solid var(--border-light, #e8e2d3);
+  background: var(--bg-surface, #ffffff);
+  font-family: inherit;
+  font-size: 13px;
+  color: var(--text-heading, #4a4f3a);
+  outline: none;
+}
+
+.admin-reviews-filter {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.admin-reviews-filter select {
+  appearance: none;
+  padding: 11px 36px 11px 36px;
+  border-radius: 10px;
+  border: 1px solid var(--border-light, #e8e2d3);
+  background: var(--bg-surface, #ffffff);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-heading, #4a4f3a);
+  cursor: pointer;
+  outline: none;
+}
+
+.admin-reviews-filter svg:first-child {
+  position: absolute;
+  left: 12px;
+  pointer-events: none;
+  color: var(--text-muted, #8a8776);
+}
+
+.admin-reviews-filter svg:last-child {
+  position: absolute;
+  right: 12px;
+  pointer-events: none;
+  color: var(--text-muted, #8a8776);
+}
+
+/* GRID */
+.admin-reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 18px;
+}
+
+.admin-review-card {
+  padding: 20px;
+  background: var(--bg-surface, #ffffff);
+  border: 1px solid var(--border-light, #e8e2d3);
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.review-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.review-target-renter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.review-target-renter strong {
+  font-size: 15px;
+  color: var(--text-heading, #4a4f3a);
+}
+
+.badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: rgba(46, 105, 48, 0.12);
+  color: #2e6930;
+}
+
+.review-item-name {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--text-muted, #8a8776);
+}
+
+.review-score-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 14px;
+  background: #2e6930;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.review-pillars-mini {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 11.5px;
+  color: var(--text-heading, #4a4f3a);
+  background: var(--bg-soft, #f7f3e8);
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.review-pillars-mini span strong {
+  color: #2e6930;
+}
+
+.review-tags-mini {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag-pill {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: rgba(201, 164, 92, 0.15);
+  color: #8c6d23;
+}
+
+.review-quote-body {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #3d3b32;
+  font-style: italic;
+  padding: 10px 12px;
+  border-left: 3px solid #2e6930;
+  background: rgba(46, 105, 48, 0.04);
+  border-radius: 4px;
+}
+
+.review-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--border-light, #e8e2d3);
+}
+
+.review-date-note {
+  font-size: 11.5px;
+  color: var(--text-muted, #8a8776);
+}
+
+.btn-del-review {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid #dfcfc8;
+  background: transparent;
+  color: #9b5750;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-del-review:hover {
+  background: #fff7f5;
+  border-color: #b96d65;
+}
+
+.admin-reviews-empty {
+  text-align: center;
+  padding: 40px;
+  grid-column: 1 / -1;
+  color: var(--text-muted, #8a8776);
+  font-style: italic;
+}

@@ -1,0 +1,200 @@
+.mode-page {
+  min-height: calc(100vh - 76px);
+  background: var(--bg-surface);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 42px 20px 20px;
+  box-sizing: border-box;
+}
+
+.mode-heading {
+  text-align: center;
+}
+
+.mode-heading h1 {
+  margin: 0;
+  color: var(--text-body);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.mode-heading p {
+  margin: 5px 0 0;
+  color: var(--text-muted);
+  font-size: 17px;
+}
+
+
+/* Illustration — decorative, not part of theme palette */
+
+.mode-illustration {
+  width: 260px;
+  height: 320px;
+  position: relative;
+  margin-top: 25px;
+}
+
+.illustration-circle {
+  position: absolute;
+  width: 218px;
+  height: 218px;
+  top: 70px;
+  left: 21px;
+  border-radius: 50%;
+  background: #d8f0f2;
+}
+
+.cart-icon {
+  position: absolute;
+  left: 68px;
+  top: 105px;
+  color: #777777;
+}
+
+.illustration-dot {
+  position: absolute;
+  border-radius: 50%;
+  background: #e4b72c;
+}
+
+.dot-one {
+  width: 20px;
+  height: 20px;
+  top: 42px;
+  left: 54px;
+}
+
+.dot-two {
+  width: 60px;
+  height: 60px;
+  left: 21px;
+  bottom: 20px;
+  background: #ffe4a7;
+}
+
+.illustration-x {
+  position: absolute;
+  color: #008caf;
+  stroke-width: 1.5;
+}
+
+.x-one {
+  top: 53px;
+  right: 50px;
+}
+
+.x-two {
+  top: 38px;
+  right: 98px;
+}
+
+
+/* Labels */
+
+.mode-labels {
+  width: 760px;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: -10px;
+  padding: 0 35px;
+  box-sizing: border-box;
+}
+
+.mode-labels div {
+  width: 170px;
+}
+
+.mode-labels p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+.mode-labels strong {
+  color: var(--text-body);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+
+/* Buttons */
+
+.mode-actions {
+  width: 830px;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 30px;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.mode-actions button {
+  height: 70px;
+  border: none;
+  color: var(--bg-surface);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  transition: opacity 0.2s ease;
+}
+
+.mode-actions button:hover {
+  opacity: 0.88;
+}
+
+.mode-rent-button {
+  background: #777fc4;
+}
+
+.mode-lend-button {
+  background: var(--action-primary);
+}
+
+.mode-actions button span {
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 300;
+}
+
+
+@media (max-width: 700px) {
+
+  .mode-page {
+    padding-top: 30px;
+  }
+
+  .mode-labels {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .mode-labels div {
+    width: 145px;
+  }
+
+  .mode-actions {
+    grid-template-columns: 1fr;
+    border-radius: 15px;
+  }
+
+  .mode-actions button {
+    height: 60px;
+  }
+
+  .mode-rent-button {
+    border-radius: 15px 15px 0 0;
+  }
+
+  .mode-lend-button {
+    border-radius: 0 0 15px 15px;
+  }
+}

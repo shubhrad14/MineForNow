@@ -1,0 +1,935 @@
+/* =========================================================
+   ADMIN LISTINGS
+========================================================= */
+
+.admin-listings-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px 0 60px;
+    color: var(--text-body);
+  }
+  
+  
+  /* =========================================================
+     PAGE HEADER
+  ========================================================= */
+  
+  .admin-listings-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 28px;
+  }
+  
+  .admin-listings-eyebrow {
+    margin: 0 0 8px;
+  
+    color: var(--action-primary);
+  
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.2px;
+  }
+  
+  .admin-listings-header h1 {
+    margin: 0 0 7px;
+  
+    color: var(--text-heading);
+  
+    font-family: Georgia, "Times New Roman", serif;
+  
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 500;
+  }
+  
+  .admin-listings-header > div:first-child > span {
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+  
+  
+  /* =========================================================
+     SUMMARY
+  ========================================================= */
+  
+  .admin-listings-summary {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  
+    min-width: 150px;
+  
+    padding: 13px 17px;
+  
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+  
+    background: var(--bg-surface);
+  }
+  
+  .admin-listings-summary > svg {
+    color: var(--action-primary);
+  }
+  
+  .admin-listings-summary div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  
+  .admin-listings-summary strong {
+    color: var(--text-heading);
+    font-size: 18px;
+  }
+  
+  .admin-listings-summary span {
+    color: var(--text-muted);
+    font-size: 10px;
+  }
+  
+  
+  /* =========================================================
+     TOOLBAR
+  ========================================================= */
+  
+  .admin-listings-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  
+    margin-bottom: 18px;
+  }
+  
+  .admin-listings-search {
+    flex: 1;
+  
+    height: 46px;
+  
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  
+    padding: 0 14px;
+  
+    border: 1px solid var(--border-light);
+    border-radius: 9px;
+  
+    background: var(--bg-surface);
+  
+    transition: 0.2s ease;
+  }
+  
+  .admin-listings-search:focus-within {
+    border-color: var(--action-primary);
+    box-shadow: 0 0 0 3px rgba(177, 93, 69, 0.07);
+  }
+  
+  .admin-listings-search svg {
+    color: var(--text-muted);
+    flex-shrink: 0;
+  }
+  
+  .admin-listings-search input {
+    width: 100%;
+  
+    border: none;
+    outline: none;
+  
+    background: transparent;
+  
+    color: var(--text-heading);
+  
+    font-family: inherit;
+    font-size: 13px;
+  }
+  
+  .admin-listings-search input::placeholder {
+    color: var(--text-muted);
+  }
+  
+  
+  /* =========================================================
+     FILTER
+  ========================================================= */
+  
+  .admin-listings-filter {
+    position: relative;
+  
+    height: 46px;
+  
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  
+    padding: 0 13px;
+  
+    border: 1px solid var(--border-light);
+    border-radius: 9px;
+  
+    background: var(--bg-surface);
+  
+    color: var(--text-muted);
+  }
+  
+  .admin-listings-filter svg:first-child {
+    color: var(--action-primary);
+  }
+  
+  .admin-listings-filter svg:last-child {
+    pointer-events: none;
+  }
+  
+  .admin-listings-filter select {
+    appearance: none;
+  
+    min-width: 135px;
+  
+    padding-right: 18px;
+  
+    border: none;
+    outline: none;
+  
+    background: transparent;
+  
+    color: var(--text-heading);
+  
+    font-family: inherit;
+    font-size: 12px;
+  
+    cursor: pointer;
+  }
+  
+  
+  /* =========================================================
+     MAIN PANEL
+  ========================================================= */
+  
+  .admin-listings-panel {
+    overflow: hidden;
+  
+    border: 1px solid var(--border-light);
+    border-radius: 15px;
+  
+    background: var(--bg-surface);
+  }
+  
+  .admin-listings-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    padding: 21px 24px;
+  
+    border-bottom: 1px solid var(--border-light);
+  }
+  
+  .admin-listings-panel-header p {
+    margin: 0 0 4px;
+  
+    color: var(--action-primary);
+  
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+  }
+  
+  .admin-listings-panel-header h2 {
+    margin: 0;
+  
+    color: var(--text-heading);
+  
+    font-family: Georgia, "Times New Roman", serif;
+  
+    font-size: 19px;
+    font-weight: 500;
+  }
+  
+  .admin-listings-info {
+    color: var(--text-muted);
+    font-size: 11px;
+  }
+  
+  
+  /* =========================================================
+     TABLE
+  ========================================================= */
+  
+  .admin-listings-table {
+    width: 100%;
+  }
+  
+  .admin-listing-row {
+    display: grid;
+  
+    grid-template-columns:
+      minmax(210px, 1.6fr)
+      minmax(130px, 1fr)
+      minmax(130px, 1fr)
+      minmax(95px, 0.7fr)
+      minmax(90px, 0.7fr)
+      75px;
+  
+    align-items: center;
+  
+    min-height: 68px;
+  
+    padding: 0 24px;
+  
+    border-bottom: 1px solid var(--border-light);
+  
+    gap: 15px;
+  }
+  
+  .admin-listing-row:last-child {
+    border-bottom: none;
+  }
+  
+  
+  /* =========================================================
+     TABLE HEADING
+  ========================================================= */
+  
+  .admin-listing-heading {
+    min-height: 42px;
+  
+    background: var(--bg-page);
+  
+    color: var(--text-muted);
+  
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  
+  .admin-listing-heading span {
+    white-space: nowrap;
+  }
+  
+  
+  /* =========================================================
+     ITEM
+  ========================================================= */
+  
+  .admin-listing-item {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+  
+    min-width: 0;
+  }
+  
+  .admin-listing-icon {
+    width: 39px;
+    height: 39px;
+  
+    flex-shrink: 0;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    border-radius: 10px;
+  
+    background: var(--bg-soft);
+    color: var(--action-primary);
+  }
+  
+  .admin-listing-item > div:last-child {
+    min-width: 0;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .admin-listing-item strong {
+    overflow: hidden;
+  
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  
+    color: var(--text-heading);
+  
+    font-size: 12px;
+  }
+  
+  .admin-listing-item span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  
+    color: var(--text-muted);
+  
+    font-size: 9px;
+  }
+  
+  
+  /* =========================================================
+     OTHER COLUMNS
+  ========================================================= */
+  
+  .admin-listing-owner,
+  .admin-listing-category {
+    color: var(--text-body);
+  
+    font-size: 11px;
+  }
+  
+  .admin-listing-price {
+    color: var(--text-price);
+  
+    font-size: 11px;
+    white-space: nowrap;
+  }
+  
+  
+  /* =========================================================
+     STATUS
+  ========================================================= */
+  
+  .admin-listing-status {
+    width: fit-content;
+  
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  
+    padding: 5px 8px;
+  
+    border-radius: 20px;
+  
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 600;
+  
+    white-space: nowrap;
+  }
+  
+  .admin-listing-status i {
+    width: 5px;
+    height: 5px;
+  
+    border-radius: 50%;
+  
+    background: currentColor;
+  }
+  
+  .admin-listing-status.active {
+    background: #e8f1e5;
+    color: #55704b;
+  }
+  
+  .admin-listing-status.pending {
+    background: #f8ead6;
+    color: #a36b2c;
+  }
+  
+  .admin-listing-status.suspended {
+    background: #f4e6e4;
+    color: #a34d43;
+  }
+  
+  .admin-listing-status.rejected {
+    background: #f4e6e4;
+    color: #a34d43;
+  }
+  
+  
+  /* =========================================================
+     VIEW BUTTON
+  ========================================================= */
+  
+  .admin-listing-view {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  
+    padding: 7px 9px;
+  
+    border: 1px solid var(--border-light);
+    border-radius: 7px;
+  
+    background: transparent;
+  
+    color: var(--text-muted);
+  
+    font-family: inherit;
+    font-size: 9px;
+  
+    cursor: pointer;
+  
+    transition: 0.2s ease;
+  }
+  
+  .admin-listing-view:hover {
+    border-color: var(--action-primary);
+    color: var(--action-primary);
+    background: var(--bg-soft);
+  }
+  
+  
+  /* =========================================================
+     EMPTY STATE
+  ========================================================= */
+  
+  .admin-listings-empty {
+    min-height: 250px;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    gap: 8px;
+  
+    color: var(--text-muted);
+  }
+  
+  .admin-listings-empty svg {
+    margin-bottom: 5px;
+    color: var(--action-primary);
+  }
+  
+  .admin-listings-empty strong {
+    color: var(--text-heading);
+    font-size: 14px;
+  }
+  
+  .admin-listings-empty span {
+    font-size: 11px;
+  }
+  
+  
+  /* =========================================================
+     MODAL OVERLAY
+  ========================================================= */
+  
+  .admin-listing-overlay {
+    position: fixed;
+  
+    inset: 0;
+  
+    z-index: 9999;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    padding: 25px;
+  
+    background: rgba(48, 35, 30, 0.32);
+  
+    backdrop-filter: blur(3px);
+  }
+  
+  
+  /* =========================================================
+     MODAL
+  ========================================================= */
+  
+  .admin-listing-modal {
+    width: 100%;
+    max-width: 540px;
+  
+    overflow: hidden;
+  
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+  
+    background: var(--bg-surface);
+  
+    box-shadow: 0 20px 60px rgba(48, 35, 30, 0.15);
+  }
+  
+  .admin-listing-modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  
+    padding: 23px 25px;
+  
+    border-bottom: 1px solid var(--border-light);
+  }
+  
+  .admin-listing-modal-header p {
+    margin: 0 0 6px;
+  
+    color: var(--action-primary);
+  
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+  }
+  
+  .admin-listing-modal-header h2 {
+    margin: 0;
+  
+    color: var(--text-heading);
+  
+    font-family: Georgia, "Times New Roman", serif;
+  
+    font-size: 24px;
+    font-weight: 500;
+  }
+  
+  .admin-listing-close {
+    width: 34px;
+    height: 34px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+  
+    background: transparent;
+  
+    color: var(--text-muted);
+  
+    cursor: pointer;
+  }
+  
+  .admin-listing-close:hover {
+    color: var(--action-primary);
+    border-color: var(--action-primary);
+  }
+  
+  
+  /* =========================================================
+     MODAL CONTENT
+  ========================================================= */
+  
+  .admin-listing-modal-content {
+    padding: 24px 25px;
+  }
+  
+  .admin-modal-item-icon {
+    width: 70px;
+    height: 70px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    margin-bottom: 22px;
+  
+    border-radius: 14px;
+  
+    background: var(--bg-soft);
+    color: var(--action-primary);
+  }
+  
+  .admin-modal-details {
+    display: grid;
+  
+    grid-template-columns: 1fr 1fr;
+  
+    gap: 17px;
+  
+    padding-bottom: 20px;
+  
+    border-bottom: 1px solid var(--border-light);
+  }
+  
+  .admin-modal-details > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .admin-modal-details span:first-child,
+  .admin-modal-description > span {
+    color: var(--text-muted);
+  
+    font-size: 9px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+  
+  .admin-modal-details strong {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  
+    color: var(--text-heading);
+  
+    font-size: 12px;
+  }
+  
+  .admin-modal-description {
+    padding-top: 18px;
+  }
+  
+  .admin-modal-description p {
+    margin: 7px 0 0;
+  
+    color: var(--text-muted);
+  
+    font-size: 12px;
+    line-height: 1.6;
+  }
+  
+  
+  /* =========================================================
+     MODAL ACTIONS
+  ========================================================= */
+  
+  .admin-listing-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 9px;
+  
+    padding: 17px 25px;
+  
+    border-top: 1px solid var(--border-light);
+  
+    background: var(--bg-page);
+  }
+  
+  .admin-listing-actions button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  
+    min-height: 38px;
+  
+    padding: 0 13px;
+  
+    border-radius: 8px;
+  
+    font-family: inherit;
+  
+    font-size: 11px;
+    font-weight: 600;
+  
+    cursor: pointer;
+  
+    transition: 0.2s ease;
+  }
+  
+  .admin-action-approve {
+    border: 1px solid var(--action-primary);
+    background: var(--action-primary);
+    color: white;
+  }
+  
+  .admin-action-approve:hover {
+    background: var(--action-primary-hover);
+  }
+  
+  .admin-action-reject,
+  .admin-action-suspend {
+    border: 1px solid var(--border-light);
+    background: var(--bg-surface);
+    color: var(--action-primary);
+  }
+  
+  .admin-action-reject:hover,
+  .admin-action-suspend:hover {
+    border-color: var(--action-primary);
+    background: var(--bg-soft);
+  }
+  
+  
+  /* =========================================================
+     RESPONSIVE
+  ========================================================= */
+  
+  @media (max-width: 1100px) {
+  
+    .admin-listing-row {
+      grid-template-columns:
+        minmax(180px, 1.5fr)
+        minmax(110px, 1fr)
+        minmax(110px, 1fr)
+        minmax(85px, 0.7fr)
+        minmax(80px, 0.7fr)
+        65px;
+  
+      padding: 0 18px;
+  
+      gap: 10px;
+    }
+  
+    .admin-listing-category {
+      font-size: 10px;
+    }
+  
+  }
+  
+  
+  @media (max-width: 900px) {
+  
+    .admin-listings-header {
+      align-items: flex-start;
+    }
+  
+    .admin-listings-toolbar {
+      flex-wrap: wrap;
+    }
+  
+    .admin-listings-search {
+      flex-basis: 100%;
+    }
+  
+    .admin-listing-row {
+      grid-template-columns:
+        minmax(190px, 1.5fr)
+        minmax(120px, 1fr)
+        minmax(90px, 0.8fr)
+        80px;
+  
+      padding: 0 16px;
+    }
+  
+    .admin-listing-row > span:nth-child(3),
+    .admin-listing-row > span:nth-child(4) {
+      display: none;
+    }
+  
+    .admin-listing-heading > span:nth-child(3),
+    .admin-listing-heading > span:nth-child(4) {
+      display: none;
+    }
+  
+  }
+  
+  
+  @media (max-width: 600px) {
+  
+    .admin-listings-page {
+      padding-bottom: 35px;
+    }
+  
+    .admin-listings-header {
+      flex-direction: column;
+      gap: 18px;
+    }
+  
+    .admin-listings-header h1 {
+      font-size: 34px;
+    }
+  
+    .admin-listings-summary {
+      width: 100%;
+    }
+  
+    .admin-listings-toolbar {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  
+    .admin-listings-filter {
+      width: 100%;
+    }
+  
+    .admin-listings-filter select {
+      flex: 1;
+    }
+  
+    .admin-listings-panel-header {
+      padding: 18px;
+    }
+  
+    .admin-listings-info {
+      display: none;
+    }
+  
+    .admin-listing-row {
+      grid-template-columns: minmax(150px, 1fr) auto;
+  
+      min-height: 70px;
+  
+      padding: 0 15px;
+    }
+  
+    .admin-listing-row > span:nth-child(2),
+    .admin-listing-row > span:nth-child(3),
+    .admin-listing-row > span:nth-child(4),
+    .admin-listing-row > span:nth-child(5),
+    .admin-listing-heading > span:nth-child(2),
+    .admin-listing-heading > span:nth-child(3),
+    .admin-listing-heading > span:nth-child(4),
+    .admin-listing-heading > span:nth-child(5) {
+      display: none;
+    }
+  
+    .admin-listing-view {
+      padding: 7px;
+    }
+  
+    .admin-listing-view svg {
+      width: 14px;
+    }
+  
+    .admin-listing-view {
+      font-size: 0;
+    }
+  
+    .admin-listing-modal {
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+  
+    .admin-modal-details {
+      grid-template-columns: 1fr;
+    }
+  
+    .admin-listing-actions {
+      flex-wrap: wrap;
+    }
+  
+  }
+/* =========================================================
+   SIDEBAR INTEGRATION
+========================================================= */
+.admin-listings-page {
+  --admin-sidebar-width: 270px;
+  min-height: 100vh;
+  width: 100%;
+  background: var(--bg-page, #fbf9f4);
+  color: var(--text-body);
+  transition: padding-left 0.3s ease;
+  box-sizing: border-box;
+}
+
+.admin-listings-page.sidebar-is-open {
+  padding-left: var(--admin-sidebar-width);
+}
+
+.admin-listings-content {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 32px 40px 60px;
+}
+
+.admin-header-title-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.admin-menu-btn {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-light, #e8e2d3);
+  border-radius: 12px;
+  background: var(--bg-surface, #ffffff);
+  color: var(--text-heading, #4a4f3a);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.admin-menu-btn:hover {
+  background: var(--bg-soft, #f2ecdd);
+}

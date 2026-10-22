@@ -1,0 +1,146 @@
+
+/* =========================
+   OTP VERIFICATION PAGE
+   MineForNow Theme
+========================= */
+
+.otp-page {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background: var(--bg-page);
+    box-sizing: border-box;
+  }
+  
+  .otp-card {
+    width: 100%;
+    max-width: 430px;
+    padding: 40px 35px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-light);
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(54, 59, 42, 0.09);
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  .otp-card h2 {
+    margin: 0 0 14px;
+    color: var(--text-heading);
+    font-size: 28px;
+    font-weight: 700;
+  }
+  
+  .otp-card p {
+    margin: 0 0 26px;
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+  }
+  
+  .otp-card p strong {
+    color: var(--text-heading);
+  }
+  
+  .otp-card form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    text-align: left;
+  }
+  
+  .otp-card label {
+    color: var(--text-heading);
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .otp-card input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--border-light);
+    border-radius: 10px;
+    outline: none;
+    box-sizing: border-box;
+    background: var(--bg-page);
+    color: var(--text-heading);
+    font-family: inherit;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 8px;
+    text-align: center;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  
+  .otp-card input::placeholder {
+    color: var(--text-muted);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+  
+  .otp-card input:focus {
+    border-color: var(--action-primary);
+    box-shadow: 0 0 0 3px rgba(177, 93, 69, 0.13);
+  }
+  
+  .otp-card button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 14px 18px;
+    border: none;
+    border-radius: 10px;
+    background: var(--action-primary);
+    color: var(--bg-surface);
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+  }
+  
+  .otp-card button:hover:not(:disabled) {
+    background: var(--action-primary-hover);
+    transform: translateY(-1px);
+  }
+  
+  .otp-card button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+  }
+  
+  /* Verification and error messages */
+  .otp-card p[role="status"] {
+    margin: 18px 0 0;
+    color: var(--text-heading);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  /* Mobile responsive */
+  @media (max-width: 480px) {
+    .otp-page {
+      min-height: 65vh;
+      padding: 30px 16px;
+    }
+  
+    .otp-card {
+      padding: 30px 22px;
+      border-radius: 14px;
+    }
+  
+    .otp-card h2 {
+      font-size: 24px;
+    }
+  
+    .otp-card input {
+      padding: 13px 10px;
+      font-size: 20px;
+      letter-spacing: 6px;
+    }
+  }
+  

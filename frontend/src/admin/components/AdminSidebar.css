@@ -1,0 +1,260 @@
+/* =========================================
+   ADMIN SIDEBAR
+========================================= */
+
+.admin-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+  
+    width: 270px;
+    height: 100vh;
+  
+    box-sizing: border-box;
+  
+    background: var(--bg-surface);
+  
+    border-right: 1px solid var(--border-light);
+  
+    display: flex;
+    flex-direction: column;
+  
+    z-index: 1000;
+  
+    transform: translateX(-100%);
+  
+    transition: transform 0.3s ease;
+  
+    overflow-y: auto;
+  }
+  
+  
+  /* OPEN */
+  
+  .admin-sidebar.admin-sidebar-open {
+    transform: translateX(0);
+  }
+  
+  
+  /* =========================================
+     BRAND
+  ========================================= */
+  
+  .admin-sidebar-brand {
+    padding: 32px 30px 28px;
+  
+    border-bottom: 1px solid var(--border-light);
+  }
+  
+  
+  /* LOGO */
+  
+  .admin-brand-name {
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+  
+    font-family: Georgia, "Times New Roman", serif;
+  
+    font-size: 29px;
+    font-weight: 600;
+  
+    letter-spacing: -1.3px;
+  
+    white-space: nowrap;
+  }
+  
+  .admin-brand-mine {
+    color: var(--text-heading);
+  }
+  
+  .admin-brand-fornow {
+    color: var(--action-primary);
+  }
+  
+  
+  /* ADMIN PANEL */
+  
+  .admin-brand-label {
+    display: block;
+  
+    margin-top: 13px;
+  
+    color: var(--action-primary);
+  
+    font-size: 10px;
+    font-weight: 700;
+  
+    letter-spacing: 3px;
+  }
+  
+  
+  /* =========================================
+     SECTION
+  ========================================= */
+  
+  .admin-sidebar-section {
+    padding: 30px 20px 0;
+  }
+  
+  .admin-sidebar-title {
+    margin: 0 0 14px 12px;
+  
+    color: var(--text-muted);
+  
+    font-size: 10px;
+    font-weight: 700;
+  
+    letter-spacing: 2px;
+  }
+  
+  
+  /* =========================================
+     NAVIGATION
+  ========================================= */
+  
+  .admin-sidebar-nav {
+    display: flex;
+    flex-direction: column;
+  
+    gap: 5px;
+  }
+  
+  
+  /* LINK */
+  
+  .admin-sidebar-link {
+    width: 100%;
+  
+    min-height: 48px;
+  
+    display: flex;
+    align-items: center;
+  
+    gap: 14px;
+  
+    padding: 0 13px;
+  
+    box-sizing: border-box;
+  
+    border: none;
+    border-radius: 11px;
+  
+    background: transparent;
+  
+    color: var(--text-muted);
+  
+    text-decoration: none;
+  
+    font-family: inherit;
+  
+    font-size: 14px;
+    font-weight: 600;
+  
+    cursor: pointer;
+  
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+  }
+  
+  
+  /* ICON */
+  
+  .admin-sidebar-link svg {
+    flex-shrink: 0;
+  }
+  
+  
+  /* HOVER */
+  
+  .admin-sidebar-link:hover {
+    background: var(--bg-soft);
+  
+    color: var(--action-primary);
+  }
+  
+  
+  /* ACTIVE */
+  
+  .admin-sidebar-link.active {
+    background: var(--bg-soft);
+  
+    color: var(--action-primary);
+  }
+  
+  
+  /* =========================================
+     SYSTEM
+  ========================================= */
+  
+  .admin-system-section {
+    margin-top: 10px;
+  }
+  
+  
+  /* =========================================
+     BOTTOM LOGOUT
+  ========================================= */
+  
+  .admin-sidebar-bottom {
+    margin-top: auto;
+  
+    padding: 20px;
+  
+    border-top: 1px solid var(--border-light);
+  }
+  
+  .admin-logout {
+    color: var(--text-muted);
+  }
+  
+  .admin-logout:hover {
+    color: var(--action-primary);
+  
+    background: var(--bg-soft);
+  }
+  
+  
+  /* =========================================
+     SCROLLBAR
+  ========================================= */
+  
+  .admin-sidebar::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  .admin-sidebar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .admin-sidebar::-webkit-scrollbar-thumb {
+    background: var(--border-light);
+  
+    border-radius: 10px;
+  }
+  
+  
+  /* =========================================
+     MOBILE
+  ========================================= */
+  
+  @media (max-width: 600px) {
+  
+    .admin-sidebar {
+      width: 260px;
+    }
+  
+    .admin-sidebar-brand {
+      padding: 26px 24px;
+    }
+  
+    .admin-sidebar-section {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  
+    .admin-sidebar-bottom {
+      padding: 16px;
+    }
+  }

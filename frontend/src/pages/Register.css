@@ -1,0 +1,613 @@
+/* =========================
+   REGISTER PAGE
+========================= */
+
+.register-page {
+    min-height: 100vh;
+  
+    display: flex;
+  
+    background-color: var(--bg-surface);
+  }
+  
+  
+  /* =========================
+     LEFT BRAND SECTION
+  ========================= */
+  
+  .register-brand {
+    position: relative;
+  
+    width: 42%;
+  
+    padding: 55px 7%;
+  
+    box-sizing: border-box;
+  
+    overflow: hidden;
+  
+    background-color: var(--bg-soft);
+  
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  .register-logo {
+    width: fit-content;
+  
+    padding: 0;
+  
+    border: none;
+  
+    background: transparent;
+  
+    cursor: pointer;
+  
+    font-family: Georgia, "Times New Roman", serif;
+  
+    font-size: 32px;
+  
+    font-weight: 600;
+  
+    letter-spacing: -1px;
+  }
+  
+  .register-logo span:first-child {
+    color: var(--text-heading);
+  }
+  
+  .register-logo span:last-child {
+    color: var(--action-primary);
+  }
+  
+  
+  /* =========================
+     BRAND CONTENT
+  ========================= */
+  
+  .register-brand-content {
+    margin-top: auto;
+  
+    margin-bottom: auto;
+  
+    max-width: 430px;
+  }
+  
+  .register-brand-content p {
+    margin: 0 0 14px;
+  
+    color: var(--action-primary);
+  
+    font-size: 12px;
+  
+    font-weight: 700;
+  
+    letter-spacing: 2px;
+  }
+  
+  .register-brand-content h1 {
+    margin: 0 0 20px;
+  
+    color: var(--text-heading);
+  
+    font-size: 50px;
+  
+    line-height: 1.12;
+  
+    font-weight: 600;
+  }
+  
+  .register-brand-content span {
+    display: block;
+  
+    max-width: 390px;
+  
+    color: var(--text-muted);
+  
+    font-size: 16px;
+  
+    line-height: 1.7;
+  }
+  
+  
+  /* =========================
+     DECORATION
+  ========================= */
+  
+  .brand-decoration {
+    position: absolute;
+  
+    right: -100px;
+  
+    bottom: -100px;
+  
+    width: 330px;
+  
+    height: 330px;
+  
+    pointer-events: none;
+  }
+  
+  .decoration-circle {
+    width: 100%;
+    height: 100%;
+  
+    background-color: var(--badge-bg);
+  
+    border-radius: 50%;
+  }
+  
+  .decoration-small {
+    position: absolute;
+  
+    width: 95px;
+    height: 95px;
+  
+    top: -25px;
+    left: 25px;
+  
+    background-color: var(--action-primary);
+  
+    border-radius: 50%;
+  
+    opacity: 0.75;
+  }
+  
+  
+  /* =========================
+     REGISTER CONTAINER
+  ========================= */
+  
+  .register-container {
+    width: 58%;
+  
+    padding: 45px 7%;
+  
+    box-sizing: border-box;
+  
+    display: flex;
+  
+    justify-content: center;
+  
+    align-items: center;
+  
+    overflow-y: auto;
+  }
+  
+  
+  /* =========================
+     REGISTER CARD
+  ========================= */
+  
+  .register-card {
+    width: 100%;
+  
+    max-width: 620px;
+  }
+  
+  
+  /* =========================
+     HEADING
+  ========================= */
+  
+  .register-heading {
+    margin-bottom: 28px;
+  }
+  
+  .register-heading p {
+    margin: 0 0 7px;
+  
+    color: var(--action-primary);
+  
+    font-size: 11px;
+  
+    font-weight: 700;
+  
+    letter-spacing: 2px;
+  }
+  
+  .register-heading h2 {
+    margin: 0 0 10px;
+  
+    color: var(--text-heading);
+  
+    font-size: 36px;
+  
+    font-weight: 600;
+  }
+  
+  .register-heading span {
+    color: var(--text-muted);
+  
+    font-size: 15px;
+  }
+  
+  
+  /* =========================
+     FORM
+  ========================= */
+  
+  .form-group {
+    margin-bottom: 22px;
+  }
+  
+  .form-group label {
+    display: block;
+  
+    margin-bottom: 8px;
+  
+    color: var(--text-heading);
+  
+    font-size: 14px;
+  
+    font-weight: 600;
+  }
+  
+  
+  /* =========================
+     INPUT
+  ========================= */
+  
+  .form-group input {
+    width: 100%;  
+    height: 54px;  
+    padding: 0 13px;  
+    box-sizing: border-box;  
+    border: 1px solid var(--border-light);  
+    border-radius: 8px;  
+    outline: none;  
+    background-color: var(--bg-surface);  
+    color: var(--text-heading); 
+    font-family: inherit;
+    font-size: 15px;
+    transition: 0.2s ease;
+  }
+  
+  .form-group input::placeholder {
+    color: var(--text-muted);
+  
+    opacity: 0.8;
+  }
+  
+  .form-group input:focus {
+    border-color: var(--action-primary);
+  
+    box-shadow: 0 0 0 3px rgba(201, 108, 75, 0.08);
+  }
+  
+  
+  /* =========================
+     PHONE
+  ========================= */
+  
+  .phone-input {
+    display: flex;
+  
+    align-items: center;
+  
+    height: 54px;
+  
+    border: 1px solid var(--border-light);
+  
+    border-radius: 8px;
+  
+    background-color: var(--bg-surface);
+  
+    overflow: hidden;
+  
+    transition: 0.2s ease;
+  }
+  
+  .phone-input:focus-within {
+    border-color: var(--action-primary);
+  
+    box-shadow: 0 0 0 3px rgba(201, 108, 75, 0.08);
+  }
+  
+  .phone-input span {
+    padding: 0 12px;
+  
+    color: var(--text-heading);
+  
+    font-size: 14px;
+  
+    border-right: 1px solid var(--border-light);
+  }
+  
+  .phone-input input {
+    border: none;
+  
+    box-shadow: none;
+  
+    height: 52px;
+  }
+  
+  .phone-input input:focus {
+    box-shadow: none;
+  
+    border: none;
+  }
+  
+  
+  /* =========================
+     PASSWORD
+  ========================= */
+  
+  .password-input {
+    position: relative;
+  }
+  
+  .password-input input {
+    padding-right: 45px;
+  }
+  
+  .password-toggle {
+    position: absolute;  
+    top: 50%;  
+    right: 13px;  
+    transform: translateY(-50%);  
+    padding: 0;  
+    border: none;  
+    background: transparent;  
+    color: var(--text-muted); 
+    cursor: pointer;  
+    display: flex;  
+    align-items: center;  
+    justify-content: center;
+  }
+  
+  .password-toggle:hover {
+    color: var(--action-primary);
+  }
+  
+  
+  /* =========================
+     PASSWORD CONDITIONS
+  ========================= */
+  
+  .password-conditions {
+    margin-top: 10px;
+  
+    padding: 15px 16px;
+  
+    background-color: var(--bg-soft);
+  
+    border-radius: 8px;
+  }
+  
+  .conditions-title {
+    display: block;
+  
+    margin-bottom: 7px;
+  
+    color: var(--text-muted);
+  
+    font-size: 11px;
+  
+    font-weight: 600;
+  }
+  
+  .password-requirement {
+    display: flex;
+  
+    align-items: center;
+  
+    gap: 7px;
+  
+    margin-top: 5px;
+  
+    color: var(--text-muted);
+  
+    font-size: 12px;
+  
+    transition: 0.2s ease;
+  }
+  
+  .password-requirement svg {
+    flex-shrink: 0;
+  }
+  
+  .password-requirement.valid {
+    color: var(--action-primary);
+  }
+  
+  
+  /* =========================
+     PASSWORD MATCH
+  ========================= */
+  
+  .password-match {
+    display: flex;
+  
+    align-items: center;
+  
+    gap: 5px;
+  
+    margin-top: 7px;
+  
+    font-size: 11px;
+  
+    font-weight: 600;
+  }
+  
+  .password-match.match {
+    color: var(--action-primary);
+  }
+  
+  .password-match.no-match {
+    color: #b05252;
+  }
+  
+  
+  /* =========================
+     ERROR
+  ========================= */
+  
+  .register-error {
+    margin-bottom: 15px;
+  
+    padding: 10px 12px;
+  
+    border-radius: 7px;
+  
+    background-color: #f9e9e6;
+  
+    color: #a34d43;
+  
+    font-size: 12px;
+  }
+  
+  
+  /* =========================
+     REGISTER BUTTON
+  ========================= */
+  
+  .register-button {
+    width: 100%;
+  
+    height: 48px;
+  
+    border: none;
+  
+    border-radius: 8px;
+  
+    background-color: var(--action-primary);
+  
+    color: var(--bg-surface);
+  
+    font-family: inherit;
+  
+    font-size: 14px;
+  
+    font-weight: 600;
+  
+    cursor: pointer;
+  
+    transition: 0.25s ease;
+  }
+  
+  .register-button:hover {
+    background-color: var(--action-primary-hover);
+  
+    transform: translateY(-1px);
+  }
+  
+  
+  /* =========================
+     LOGIN LINK
+  ========================= */
+  
+  .login-link {
+    display: flex;
+  
+    justify-content: center;
+  
+    align-items: center;
+  
+    gap: 5px;
+  
+    margin-top: 20px;
+  
+    color: var(--text-muted);
+  
+    font-size: 13px;
+  }
+  
+  .login-link button {
+    padding: 0;
+  
+    border: none;
+  
+    background: transparent;
+  
+    color: var(--action-primary);
+  
+    font-family: inherit;
+  
+    font-size: 13px;
+  
+    font-weight: 600;
+  
+    cursor: pointer;
+  }
+  
+  .login-link button:hover {
+    color: var(--action-primary-hover);
+  
+    text-decoration: underline;
+  }
+  
+  
+  /* =========================
+     RESPONSIVE
+  ========================= */
+  
+  @media (max-width: 900px) {
+  
+    .register-page {
+      min-height: auto;
+  
+      flex-direction: column;
+    }
+  
+    .register-brand {
+      width: 100%;
+  
+      min-height: 300px;
+  
+      padding: 35px 7%;
+    }
+  
+    .register-brand-content {
+      margin-top: 70px;
+  
+      margin-bottom: 20px;
+    }
+  
+    .register-brand-content h1 {
+      font-size: 40px;
+    }
+  
+    .brand-decoration {
+      width: 220px;
+      height: 220px;
+  
+      right: -70px;
+      bottom: -70px;
+    }
+  
+    .register-container {
+      width: 100%;
+  
+      padding: 45px 7%;
+    }
+  }
+  
+  
+  @media (max-width: 600px) {
+  
+    .register-brand {
+      min-height: 260px;
+    }
+  
+    .register-brand-content {
+      margin-top: 50px;
+    }
+  
+    .register-brand-content h1 {
+      font-size: 34px;
+    }
+  
+    .register-brand-content span {
+      font-size: 14px;
+    }
+  
+    .register-container {
+      padding: 35px 6%;
+    }
+  
+    .register-heading h2 {
+      font-size: 26px;
+    }
+  }

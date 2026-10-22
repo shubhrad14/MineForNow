@@ -1,0 +1,455 @@
+/* =========================
+   LOGIN PAGE
+========================= */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  background-color: var(--bg-surface);
+}
+
+
+/* =========================
+   LEFT BRAND SECTION
+========================= */
+
+.login-brand {
+  position: relative;
+  width: 42%;
+  padding: 55px 7%;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: var(--bg-soft);
+  display: flex;
+  flex-direction: column;
+}
+
+.login-logo {
+  width: fit-content;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+.login-logo span:first-child {
+  color: var(--text-heading);
+}
+
+.login-logo span:last-child {
+  color: var(--action-primary);
+}
+
+
+/* =========================
+   BRAND CONTENT
+========================= */
+
+.login-brand-content {
+  margin-top: auto;
+  margin-bottom: auto;
+  max-width: 430px;
+}
+
+.login-brand-content p {
+  margin: 0 0 14px;
+  color: var(--action-primary);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.login-brand-content h1 {
+  margin: 0 0 20px;
+  color: var(--text-heading);
+  font-size: 50px;
+  line-height: 1.12;
+  font-weight: 600;
+}
+
+.login-brand-content span {
+  display: block;
+  max-width: 390px;
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   DECORATION
+========================= */
+
+.login-brand-decoration {
+  position: absolute;
+  right: -100px;
+  bottom: -100px;
+  width: 330px;
+  height: 330px;
+  pointer-events: none;
+}
+
+.login-decoration-circle {
+  width: 100%;
+  height: 100%;
+  background-color: var(--badge-bg);
+  border-radius: 50%;
+}
+
+.login-decoration-small {
+  position: absolute;
+  width: 95px;
+  height: 95px;
+  top: -25px;
+  left: 25px;
+  background-color: var(--action-primary);
+  border-radius: 50%;
+  opacity: 0.75;
+}
+
+
+/* =========================
+   LOGIN CONTAINER
+========================= */
+
+.login-container {
+  width: 58%;
+  padding: 45px 7%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+
+/* =========================
+   LOGIN CARD
+========================= */
+
+.login-card {
+  width: 100%;
+  max-width: 460px;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.login-heading {
+  margin-bottom: 28px;
+}
+
+.login-heading p {
+  margin: 0 0 7px;
+  color: var(--action-primary);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.login-heading h2 {
+  margin: 0 0 10px;
+  color: var(--text-heading);
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.login-heading span {
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+
+/* =========================
+   FIELD
+========================= */
+
+.login-field {
+  margin-bottom: 20px;
+}
+
+.login-field label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-heading);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+.login-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  height: 50px;
+  padding: 0 13px;
+  box-sizing: border-box;
+  border: 1px solid var(--border-light);
+  border-radius: 9px;
+  background: var(--bg-page);
+  transition: 0.2s ease;
+}
+
+.login-input:focus-within {
+  border-color: var(--action-primary);
+  box-shadow: 0 0 0 3px rgba(177, 93, 69, 0.08);
+}
+
+.login-input > svg {
+  color: var(--action-primary);
+  flex-shrink: 0;
+}
+
+.login-input input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--text-heading);
+  font-family: inherit;
+  font-size: 14px;
+  padding-right: 30px; /* room for the eye icon on password fields */
+}
+
+.login-input input::placeholder {
+  color: var(--text-muted);
+}
+
+
+/* =========================
+   PASSWORD TOGGLE
+   Scoped uniquely (login-password-toggle) so it can never collide
+   with Register's .password-toggle class again.
+========================= */
+
+.login-password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 13px;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.login-password-toggle:hover {
+  color: var(--action-primary);
+}
+
+
+/* =========================
+   OPTIONS ROW
+========================= */
+
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0 22px;
+  font-size: 12px;
+}
+
+.login-options label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-muted);
+}
+
+.login-options input {
+  accent-color: var(--action-primary);
+}
+
+.login-options button {
+  border: none;
+  padding: 0;
+  background: transparent;
+  color: var(--action-primary);
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.login-options button:hover {
+  color: var(--text-heading);
+}
+
+
+/* =========================
+   ERROR
+========================= */
+
+.login-error {
+  margin-bottom: 15px;
+  padding: 10px 12px;
+  border-radius: 7px;
+  background-color: #f9e9e6;
+  color: #a34d43;
+  font-size: 12px;
+}
+
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+.login-button {
+  width: 100%;
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+  background: var(--action-primary);
+  color: var(--bg-surface);
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.login-button:hover {
+  background: var(--action-primary-hover);
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   REGISTER LINK
+========================= */
+
+.login-register {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 25px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.login-register button {
+  border: none;
+  padding: 0;
+  background: transparent;
+  color: var(--action-primary);
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.login-register button:hover {
+  color: var(--action-primary-hover);
+  text-decoration: underline;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .login-page {
+    min-height: auto;
+    flex-direction: column;
+  }
+
+  .login-brand {
+    width: 100%;
+    min-height: 260px;
+    padding: 35px 7%;
+  }
+
+  .login-brand-content {
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
+
+  .login-brand-content h1 {
+    font-size: 40px;
+  }
+
+  .login-brand-decoration {
+    width: 220px;
+    height: 220px;
+    right: -70px;
+    bottom: -70px;
+  }
+
+  .login-container {
+    width: 100%;
+    padding: 45px 7%;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .login-brand {
+    min-height: 220px;
+  }
+
+  .login-brand-content {
+    margin-top: 40px;
+  }
+
+  .login-brand-content h1 {
+    font-size: 34px;
+  }
+
+  .login-brand-content span {
+    font-size: 14px;
+  }
+
+  .login-container {
+    padding: 35px 6%;
+  }
+
+  .login-heading h2 {
+    font-size: 26px;
+  }
+}
+
+/* ADMIN SWITCH LINK */
+.login-admin-switch {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--border-color, #e8e2d3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-muted, #8a8776);
+}
+
+.login-admin-switch button {
+  background: none;
+  border: none;
+  color: var(--brand-terracotta, #b15d45);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.2s;
+}
+
+.login-admin-switch button:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}

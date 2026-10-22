@@ -1,0 +1,122 @@
+.confirmed-page {
+    min-height: calc(100vh - 76px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background: var(--bg-page);
+    box-sizing: border-box;
+  }
+  
+  .confirmed-card {
+    width: 100%;
+    max-width: 480px;
+    padding: 44px 38px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-light);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(74, 79, 58, 0.08);
+    box-sizing: border-box;
+  }
+  
+  .confirmed-icon {
+    width: 76px;
+    height: 76px;
+    margin: 0 auto 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--badge-bg);
+    color: var(--action-primary);
+  }
+  
+  .confirmed-card h1 {
+    margin: 0 0 12px;
+    color: var(--text-heading);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  
+  .confirmed-card > p {
+    margin: 0 0 28px;
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .confirmed-summary {
+    padding: 18px 20px;
+    margin-bottom: 28px;
+    background: var(--bg-page);
+    border-radius: 12px;
+    text-align: left;
+  }
+  
+  .confirmed-summary-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+  }
+  
+  .confirmed-summary-line span {
+    color: var(--text-muted);
+    font-size: 13px;
+  }
+  
+  .confirmed-summary-line strong {
+    color: var(--text-heading);
+    font-size: 14px;
+  }
+  
+  .confirmed-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .confirmed-primary-btn,
+  .confirmed-secondary-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 13px;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+    box-sizing: border-box;
+  }
+  
+  .confirmed-primary-btn {
+    border: none;
+    background: var(--action-primary);
+    color: var(--bg-surface);
+  }
+  
+  .confirmed-primary-btn:hover {
+    background: var(--action-primary-hover);
+  }
+  
+  .confirmed-secondary-btn {
+    border: 1px solid var(--border-light);
+    background: transparent;
+    color: var(--text-heading);
+  }
+  
+  .confirmed-secondary-btn:hover {
+    border-color: var(--action-primary);
+    color: var(--action-primary);
+  }
+  
+  @media (max-width: 500px) {
+    .confirmed-card {
+      padding: 34px 24px;
+    }
+  }

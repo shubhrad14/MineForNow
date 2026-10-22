@@ -1,0 +1,84 @@
+.admin-layout {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--bg-page);
+}
+
+.admin-layout-content {
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  padding: 32px 40px 60px;
+
+  background: var(--bg-page);
+}
+
+
+/* =========================================
+   MENU BUTTON
+========================================= */
+
+.admin-menu-button {
+  width: 64px;
+  height: 64px;
+
+  position: fixed;
+  top: 32px;
+  left: 56px;
+
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  border: 1px solid var(--border-light);
+  border-radius: 17px;
+
+  background: var(--bg-surface);
+
+  cursor: pointer;
+
+  box-shadow: 0 2px 8px rgba(48, 35, 30, 0.04);
+
+  transition: 0.25s ease;
+}
+
+.admin-menu-button:hover {
+  border-color: var(--action-primary);
+}
+
+.admin-menu-button span {
+  width: 22px;
+  height: 2px;
+
+  border-radius: 2px;
+
+  background: var(--text-heading);
+
+  transition: 0.25s ease;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .admin-layout-content {
+    padding: 20px 18px 40px;
+  }
+
+  .admin-menu-button {
+    top: 20px;
+    left: 20px;
+
+    width: 52px;
+    height: 52px;
+  }
+
+}
